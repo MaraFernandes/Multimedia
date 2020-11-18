@@ -1,0 +1,858 @@
+*{
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: white;
+  font-family: "Roboto", sans-serif;
+}
+
+/*------------------------DEFINIÇÕES GRID--------------------*/
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 3fr;
+  grid-template-rows: auto 2fr;
+  grid-template-areas: "menu body" "menu footer";
+}
+
+.aside {
+  grid-area: menu;
+  background-color: #ec058e;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding-left: 4%;
+  padding-right: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  z-index: 1;
+}
+
+.main {
+  grid-area: body;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*--------------------------Menu-----------------------------*/
+
+
+.MainTopics {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.MainTopics li a {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+}
+
+.MainTopics li li a {
+  font-weight: 400;
+}
+
+.topic {
+  font-weight: 400;
+  display: none;
+}
+
+.menu_active{
+  font-weight: 400;
+  display: block;
+}
+
+.linguas a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: white;
+  display: inline-block;
+  padding-right: 10px;
+  text-decoration: white;
+}
+
+.linguas {
+  padding-top: 7%;
+  display: flex;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: white;
+  font-size: 150%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+ul {
+  padding-left: 10px;
+}
+
+.MenuTitle a {
+  color: white;
+  font-size: 100%;
+  text-decoration: none;
+}
+
+.menu-button {
+  display: none;
+  border-radius: 4px;
+  border: 2px solid #662D91;
+  padding: 7px;
+  margin-top: 7px;
+  margin-left: auto;
+}
+
+/*----------------------------------------------*/
+
+/*-------------HEADER LANDING PAGE-----------------*/
+
+.header h1{
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+  display: flex;
+  background-image:url("../pics/homepage.jpg");
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0; 
+  left: 0;
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+
+}
+
+.headerContent h1{
+ color:white;
+ font-size: 90px;
+ text-align: center;
+}
+
+.MenuHome{
+  display: inline-block;
+  padding-top: 7%;
+}
+
+.B1{
+  margin-right: 15px;
+}
+
+.B1 a{
+  color:white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.B1 h2 a{
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.B1:hover{
+  background-color:#ec058e;
+}
+/*-------------------------------------------------*/
+
+/*-------------CONTEUDO DO MAIN (CAMPUS)------------*/
+
+.container1 {
+  padding-bottom: 15%;
+}
+
+
+.container4 a {
+  color: #ec058e;
+  text-decoration: none;
+}
+
+.main p {
+  font-size: 15px;
+}
+
+.main h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 350%;
+}
+
+.main h2 {
+  font-size: 15px;
+}
+
+img {
+  width: 100%;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------- SOBRE A ESD---------------------------------------------------------- */
+.container_esd {
+  padding-bottom: 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+/* --------------------------------Organograma-------------------------------------------------------------------*/
+
+.container_organograma {
+  padding-bottom: 15%;
+}
+/* ----------------------------------------- Corpo Docente---------------------------------------------------------*/
+
+.aviso{
+  display: none;
+}
+
+.container_corpodocente {
+  padding-bottom: 15%;
+}
+/*  ------------------------------------------estado hover fotos---------------------------------------------------*/
+
+.fotos_hover {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 109.3px;
+}
+
+/*----------------TESTE MARCIA AQUI-----------*/
+
+
+.serejo, .paula, .albino, .nuno, .mota_teixeira, .susana, .madureira, .catarina, .jorge{
+  position: relative;
+  width: 30%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+.text{
+  color:black;
+  font-size: 15px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.serejo:hover .overlay {
+  opacity: 50%;
+}
+
+.paula:hover .overlay {
+  opacity: 50%;
+}
+
+.albino:hover .overlay {
+  opacity: 50%;
+}
+
+.nuno:hover .overlay {
+  opacity: 50%;
+}
+
+.mota_teixeira :hover {
+  opacity: 50%;
+}
+
+.susana :hover {
+  opacity: 50%;
+}
+
+.madureira :hover {
+  opacity: 50%;
+}
+
+.catarina :hover {
+  opacity: 50%;
+}
+
+.jorge :hover {
+  opacity: 50%;
+}
+
+
+/* -----------------------------Sobre horario...............*/
+
+.container_horario {
+  padding-bottom: 15%;
+}
+
+.container_horario a {
+  color: #ec058e;
+  text-decoration: none;
+}
+/* ----------------------------------------- Sobre Main------------------------------------------------*/
+
+.main p {
+  font-size: 15px;
+}
+
+
+.main h2 {
+  font-size: 15px;
+}
+
+img {
+  width: 100%;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------SOBRE O CURSO-------------------------------------- */
+
+/*    SOBRE O CRUSO   */
+.sobrecursocontainer {
+  display: flex;
+  padding-bottom: 15%;
+}
+
+.sobrecursotxt {
+  width: 40%;
+  /* text-align: justify; */
+}
+
+.imgcurso {
+  width: 50%;
+  right: 0;
+  padding-left: 35px;
+}
+
+.nomes{
+  font-weight: 500;
+}
+
+/*    TABELAS    */
+.tabelas {
+  background-color: white;
+  /*padding: 5%;*/
+}
+
+.table1 {
+  background-color: white;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+}
+.table2 {
+  background-color: white;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+}
+.table3 {
+  background-color: white;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+}
+td,
+th {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid black;
+}
+.linha1 {
+  color: #574951;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.celula1 {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.celula2 {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.celula3 {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.celula4 {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.title {
+  text-align: center;
+}
+
+/*  -----------  BOTOES TABELAS  -----------  */
+.tabs-menu {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f10088;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tabs-menu a {
+  text-decoration: none;
+  padding: 15px;
+  border: 1.5px solid transparent;
+  color: gray;
+}
+
+.tabs-menu li {
+  display: inline;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.tabs-menu li :hover {
+  background-color: rgb(242, 242, 242);
+  border-radius: 6px;
+  border: 1.5px solid #f10088;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-active {
+  display: block;
+}
+
+.tabs-menu .active {
+  background-color: #f10088;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 6px;
+}
+.tabs-menu .active:hover {
+  background-color: #f10088;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+/* ------------------FOOTER-------------------------*/
+
+footer {
+  grid-area: footer;
+  background-color: white;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.site_footer {
+  background-color: white;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.row {
+  display: grid;
+  color: rgb(255, 0, 128);
+  grid-template-rows: 1fr;
+  grid-template-columns: 55% 1fr 1fr;
+  padding-left: 0px;
+}
+.contacto {
+  margin-right: 50px;
+  color:rgb(255, 0, 128);
+}
+
+.esd {
+  padding-left: 0px;
+  margin-left: 0;
+  padding-right: 22%;
+}
+hr {
+  border: 5px solid rgb(255, 0, 128);
+  background-color: rgb(255, 0, 128);
+  margin-bottom: 10%;
+}
+ul {
+  padding-left: 0;
+  padding-top: 0px;
+  list-style-type: none;
+}
+a {
+  color: rgb(255, 0, 128);
+}
+
+.links {
+  display: flex;
+  margin-top: 7%;
+  justify-items: right;
+}
+
+/* ------------------------------------------------------ */
+
+
+/* 375px aka Mobile */
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-row: 15% auto 1fr;
+    grid-gap: 0;
+    grid-template-areas: "menu" "body" "footer";
+    margin: 0;
+    padding: 0;
+  }
+
+  .container_esd{
+    display: block;
+  }
+
+  /*-------------HEADER LANDING PAGE-----------------*/
+
+
+.headerContent h1{
+ color:white;
+ font-size: 200%;
+}
+
+.MenuHome{
+  display: block;
+  text-align: center;
+  padding-left: 9%;
+  padding-top: 20%;
+}
+
+.B1{
+  border:0;
+}
+
+
+.B1 h2 a{
+  font-size: 19px;
+}
+
+/*-------------------------------------------------*/
+
+  /*------------ Menu -------------*/
+  .aside {
+    background: #ec058e;
+    grid-area: menu;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 10%;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+
+
+  .menu-nav {
+    display: none;
+    position: fixed;
+     background-color: #ec058e;
+     width: 100%;
+     height: 100%;
+     top: 10%;
+     bottom: 0;
+     left: 0;
+     padding-top: 20px ;
+     padding-left: 20px;
+  }
+  .menu-active{
+    display: block;
+  }
+
+
+  .MainTopics li a {
+    margin-right: 10 px;
+  }
+ 
+
+  .menu-button {
+    display: block;
+  }
+
+
+  .barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 5%;
+  }
+
+  .MenuTitle {
+    font-size: 10px;
+    padding-top: 0;
+  }
+
+  .row {
+    display: block;
+  }
+
+
+  .main {
+    padding-top: 30%;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .main h1 {
+    font-size: 30px;
+  }
+
+  .main p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  /*SOBRE CURSO*/
+
+  .sobrecursocontainer {
+    display: block;
+  }
+
+  .sobrecursocontainer img {
+    width: 150%;
+  }
+
+  .sobrecursotxt {
+    width: 100%;
+  }
+
+  .celula2 {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .tabs-menu {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .tabelas {
+    padding: 0;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  .tabs-menu a{
+      padding: 0;
+  }
+
+  /*DOCENTES*/
+
+.aviso{
+  display: block;
+}
+
+.serejo, .paula, .albino, .nuno, .mota_teixeira, .susana, .madureira, .catarina, .jorge{
+  position: relative;
+  width: 50%;
+}
+
+.fotos_hover{
+  display: flex;
+}
+
+  /*FOOTER*/
+
+  .links img {
+    width: 50%;
+  }
+
+  .links a {
+    padding: 0;
+  }
+
+  .site_footer h2 {
+    font-size: 15px;
+  }
+
+  .site_footer p {
+    font-size: 11px;
+  }
+
+  footer{
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+/* 768px aka Tablet */
+
+@media (min-width: 768px) {  
+ 
+  .container {
+    display: grid;
+    grid-template-columns: 30% 3fr;
+    grid-template-rows: auto 2fr;
+    grid-template-areas: "menu body" "menu footer";
+  }
+
+  /*HOME PAGE HEADER*/
+
+   
+   .MenuHome{
+     display: block;
+     text-align: center;
+     align-items: center;
+   }
+   
+   .B1{
+     border: 1.5px solid white;
+     align-self: center;
+     border: none;
+   }
+   
+   
+   .B1 h2 a{
+     padding-right: 20px;
+     padding-left: 20px;
+     padding-top: 15px;
+     padding-bottom: 15px;
+   }
+
+  /*----------------*/
+
+   /*SOBRE CURSO*/
+ .sobrecursocontainer {
+    display: block;
+  }
+
+  .imgcurso{
+    padding-left: 0;
+  }
+
+  .sobrecursocontainer img {
+    width: 150%;
+  }
+
+  .sobrecursotxt {
+    width: 100%;
+  }
+
+  .aside{
+    padding-right: 3%;
+    
+  }
+
+  .table1{
+    width: 100%;
+  }
+  .table2{
+    width: 100%;
+  }
+  .table3{
+    width: 100%;
+  }
+
+
+  .aviso{
+    display: block;
+  }
+
+  .container_esd{
+    display: block;
+  }
+  
+  /*----------FOOTER---------------*/
+
+  .row{
+    display: block;
+  }
+
+  .links img {
+    width: 80%;
+  }
+
+  /*-------------------------------*/
+
+}
+
+@media (min-width: 1025px) {
+  .MenuHome{
+    display: flex;
+  }
+
+  .main{
+    padding-left: 5%;
+  }
+
+  footer{
+    padding-left: 5%;
+  }
+
+  .container_esd{
+    display: grid;
+  }
+
+  .row{
+    display: grid;
+  }
+  
+  .row h2{
+    font-size: 15px;
+  }
+
+  .row p{
+    font-size: 15px;
+  }
+
+  .aviso{
+    display: none;
+  }
+
+}
